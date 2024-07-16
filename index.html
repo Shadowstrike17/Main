@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atreya Patel Portfolio</title>
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #1d1f27;
+        color: #fff;
+        margin: 0;
+        padding: 0;
+        transition: all 0.3s ease;
+      }
+      .container {
+        width: 90%;
+        max-width: 1200px;
+        margin: auto;
+        overflow: hidden;
+      }
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0;
+        border-bottom: 1px solid #444;
+      }
+      .navbar a {
+        color: #fff;
+        text-decoration: none;
+        padding: 0 15px;
+        transition: color 0.3s ease;
+      }
+      .navbar a:hover {
+        color: #ff6347;
+      }
+      .header {
+        padding: 50px 0;
+        text-align: center;
+        animation: fadeIn 1s ease-in-out;
+      }
+      .header img {
+        width: 150px;
+        border-radius: 50%;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+        transition: transform 0.3s ease;
+      }
+      .header img:hover {
+        transform: scale(1.1);
+      }
+      .header h1 {
+        margin: 10px 0;
+        font-size: 36px;
+      }
+      .header p {
+        font-size: 18px;
+        margin: 10px 0;
+        color: #aaa;
+      }
+      .header a {
+        display: inline-block;
+        padding: 10px 20px;
+        margin: 20px 0;
+        background: #ff6347;
+        color: #fff;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: background 0.3s ease;
+      }
+      .header a:hover {
+        background: #e5533d;
+      }
+      .projects {
+        padding: 20px 0;
+        text-align: center;
+      }
+      .projects h2 {
+        font-size: 28px;
+        margin-bottom: 20px;
+        animation: fadeInUp 1s ease-in-out;
+      }
+      .project {
+        display: inline-block;
+        width: 45%;
+        margin: 2.5%;
+        padding: 20px;
+        background: #2a2d37;
+        border-radius: 5px;
+        text-align: left;
+        transition: background 0.3s ease;
+      }
+      .project:hover {
+        background: #3a3d47;
+      }
+      .project h3 {
+        margin-top: 0;
+      }
+      .project a {
+        color: #ff6347;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+      .project a:hover {
+        color: #e5533d;
+        text-decoration: underline;
+      }
+      @media (max-width: 768px) {
+        .navbar {
+          flex-direction: column;
+        }
+        .project {
+          width: 90%;
+          margin: 5% auto;
+        }
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="navbar">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+      </div>
+      <div class="header">
+        <img src="https://via.placeholder.com/150" alt="Atreya Patel" />
+        <h1>Atreya Patel</h1>
+        <p>Hi I am Atreya and I like to code,hack,play cricket and much more and I have created this website to show stuff about me so go and explore to find out more!</p>
+        <a href="#projects">View Projects</a>
+      </div>
+      <div class="projects" id="projects">
+        <h2>Featured Projects</h2>
+        <div class="project" id="task">
+          <h3>T.A.S.K</h3>
+          <p>Click to view more details about T.A.S.K.</p>
+          <a href="#" onclick="showTaskDetails()">View Details</a>
+          <div id="taskDetails" style="display:none; margin-top: 10px;">
+            <a href="https://shadowstrike17.github.io/Games/" target="_blank">T.A.S.K Games</a><br/>
+            <a href="https://shadowstrike17.github.io/how-to-hack/" target="_blank">T.A.S.K Helper</a>
+          </div>
+        </div>
+        <div class="project" id="notes">
+          <h3>Maths Notes Website</h3>
+          <p>Click to view more details about Maths Notes Website.</p>
+          <a href="#" onclick="showNotesDetails()">View Details</a>
+          <div id="notesDetails" style="display:none; margin-top: 10px;">
+            <p>No links available for this project.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      function showTaskDetails() {
+        var taskDetails = document.getElementById("taskDetails");
+        if (taskDetails.style.display === "none") {
+          taskDetails.style.display = "block";
+        } else {
+          taskDetails.style.display = "none";
+        }
+      }
+
+      function showNotesDetails() {
+        var notesDetails = document.getElementById("notesDetails");
+        if (notesDetails.style.display === "none") {
+          notesDetails.style.display = "block";
+        } else {
+          notesDetails.style.display = "none";
+        }
+      }
+    </script>
+  </body>
+</html>
